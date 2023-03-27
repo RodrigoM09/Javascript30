@@ -57,7 +57,7 @@
       });
       console.log(comment);
 
-      const commentSimplified = comment.find(
+      const commentSimplified = comments.find(
         (comment) => comment.id === 823423
       );
       console.log(commentSimplified);
@@ -65,6 +65,17 @@
       // Array.prototype.findIndex()
       // Find the comment with this ID
       // delete the comment with the ID of 823423
+
+      const index = comments.findIndex((comment) => comment.id === 823423);
+      console.log(index);
+      //First Way, cutting element out of existing array
+      //comments.splice(index, 1);
+
+      //Second way is creating a new array, this keeps the original array and creates the new one
+      const newComments = [
+        ...comments.slice(0, index),
+        ...comments.slice(index + 1),
+      ];
     </script>
   </body>
 </html>

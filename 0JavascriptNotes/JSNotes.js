@@ -11,3 +11,8 @@ console.log(first, last);
 const {first, last} = name;
 const {first: f, last: l} = name;
 console.log(f, l);
+
+//Array Destructuring
+const arr = ['Bruce', 'Wayne'];
+const [firstName, lastName] = arr;
+console.log(firstName, lastName);
